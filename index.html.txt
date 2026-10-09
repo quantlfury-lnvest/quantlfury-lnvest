@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Check-Contabil — Cincontabil Contabilidade Empresarial LTDA. Serviços de contabilidade e assessoria empresarial em Maceió, Alagoas.">
+  <meta name="keywords" content="contabilidade em Maceió, escritório contábil, Check-Contabil, Cincontabil, contador, contabilidade empresarial, serviços contábeis">
+  <meta name="author" content="Check-Contabil - Cincontabil Contabilidade Empresarial LTDA">
+  <title>Check-Contabil | Contabilidade Empresarial em Maceió - AL</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--primary:#123c69;--primary2:#0b2745;--accent:#21a179;--light:#f4f7fb;--text:#1e293b;--muted:#64748b;--white:#fff;}
+    *{scroll-behavior:smooth}
+    body{font-family:Inter,Arial,sans-serif;color:var(--text);background:#fff;line-height:1.7}
+    h1,h2,h3,h4,h5{font-family:Montserrat,Inter,sans-serif}
+    .navbar{background:rgba(11,39,69,.96)!important;backdrop-filter:blur(10px)}
+    .brand-mark{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#55d6aa);display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:1.25rem;box-shadow:0 8px 20px rgba(33,161,121,.25)}
+    .navbar-brand span{font-weight:800;letter-spacing:-.5px}
+    .hero{min-height:88vh;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(7,29,51,.94) 0%,rgba(7,29,51,.80) 48%,rgba(7,29,51,.45) 100%),url('https://images.pexels.com/photos/7654132/pexels-photo-7654132.jpeg?auto=compress&cs=tinysrgb&w=1800') center/cover no-repeat;color:#fff}
+    .hero:after{content:"";position:absolute;inset:auto -10% -140px;height:260px;background:#fff;border-radius:50% 50% 0 0/100% 100% 0 0;opacity:.95}
+    .hero-content{position:relative;z-index:2;padding:100px 0 120px}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;padding:8px 14px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.09);border-radius:999px;font-size:.9rem;margin-bottom:20px}
+    .hero h1{font-size:clamp(2.5rem,5vw,4.8rem);line-height:1.08;letter-spacing:-2px;max-width:850px}
+    .hero p{font-size:1.12rem;max-width:720px;color:#e7eef6}
+    .btn-main{background:var(--accent);border:0;color:#fff;padding:13px 22px;border-radius:12px;font-weight:700;box-shadow:0 12px 28px rgba(33,161,121,.25)}
+    .btn-main:hover{background:#188864;color:#fff;transform:translateY(-1px)}
+    .btn-outline-light{border-radius:12px;padding:12px 21px;font-weight:700}
+    section{padding:88px 0}
+    .section-kicker{color:var(--accent);font-weight:800;text-transform:uppercase;letter-spacing:1.4px;font-size:.8rem}
+    .section-title{font-size:clamp(2rem,3.5vw,3rem);letter-spacing:-1px;margin-top:8px}
+    .section-text{color:var(--muted);max-width:720px}
+    .stat-strip{margin-top:-38px;position:relative;z-index:5}
+    .stat-card{background:#fff;border-radius:18px;padding:25px;box-shadow:0 15px 45px rgba(15,23,42,.09);height:100%;border:1px solid #e7edf5}
+    .stat-icon{width:50px;height:50px;border-radius:14px;background:#e9f7f2;color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:16px}
+    .stat-card h3{font-size:1.45rem;margin-bottom:5px}
+    .stat-card p{color:var(--muted);margin:0;font-size:.93rem}
+    .service-card{height:100%;border:1px solid #e7edf5;border-radius:20px;padding:30px;background:#fff;transition:.25s;box-shadow:0 8px 25px rgba(15,23,42,.04)}
+    .service-card:hover{transform:translateY(-6px);box-shadow:0 18px 45px rgba(15,23,42,.10);border-color:#cfe4dc}
+    .service-icon{width:58px;height:58px;border-radius:16px;background:#eef5fb;color:var(--primary);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:20px}
+    .service-card p{color:var(--muted);font-size:.95rem}
+    .about{background:var(--light)}
+    .about-img{border-radius:24px;overflow:hidden;box-shadow:0 20px 55px rgba(15,23,42,.14);height:100%;min-height:460px}
+    .about-img img{width:100%;height:100%;object-fit:cover}
+    .check-list{list-style:none;padding:0;margin:25px 0}
+    .check-list li{display:flex;gap:12px;margin-bottom:14px;color:#334155}
+    .check-list i{color:var(--accent);font-size:1.2rem;margin-top:2px}
+    .feature-box{background:#fff;border-radius:18px;padding:22px;border:1px solid #e6edf4;height:100%}
+    .feature-box i{font-size:1.5rem;color:var(--accent)}
+    .process-card{position:relative;padding:30px;border-radius:20px;background:#fff;border:1px solid #e7edf5;height:100%}
+    .process-number{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--primary);color:#fff;font-weight:800;margin-bottom:20px}
+    .gallery-card{height:300px;border-radius:20px;overflow:hidden;position:relative}
+    .gallery-card img{width:100%;height:100%;object-fit:cover;transition:.4s}
+    .gallery-card:hover img{transform:scale(1.05)}
+    .gallery-caption{position:absolute;left:0;right:0;bottom:0;padding:55px 20px 18px;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.72));font-weight:700}
+    .data-table{background:#fff;border-radius:20px;overflow:hidden;border:1px solid #e7edf5}
+    .data-table .row{padding:14px 20px;border-bottom:1px solid #edf1f5}
+    .data-table .row:last-child{border-bottom:0}
+    .data-label{font-weight:700;color:#334155}
+    .contact{background:linear-gradient(135deg,#0b2745,#123c69);color:#fff}
+    .contact .section-text{color:#cbd8e7}
+    .contact-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:25px;height:100%}
+    .contact-card i{font-size:1.5rem;color:#71dfbd;margin-right:8px}
+    .contact-card a{color:#fff;text-decoration:none}
+    .map-wrap{border-radius:22px;overflow:hidden;height:360px;background:#dbe5ef}
+    .map-wrap iframe{width:100%;height:100%;border:0}
+    .faq .accordion-item{border:1px solid #e6edf4!important;border-radius:14px!important;margin-bottom:12px;overflow:hidden}
+    .faq .accordion-button{font-weight:700;padding:20px}
+    .faq .accordion-button:not(.collapsed){background:#eef7f4;color:#0d624b;box-shadow:none}
+    footer{background:#071d33;color:#aebdcd;padding:35px 0}
+    footer a{color:#dce7f2;text-decoration:none}
+    .floating-wa{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#25d366;color:#fff;font-size:1.7rem;z-index:999;box-shadow:0 10px 30px rgba(37,211,102,.35)}
+    .floating-wa:hover{color:#fff;transform:scale(1.05)}
+    .small-note{font-size:.82rem;color:#94a3b8}
+    @media(max-width:767px){.hero{min-height:82vh}.hero-content{padding:90px 0 100px}.hero h1{letter-spacing:-1px}.hero:after{bottom:-180px}.about-img{min-height:330px}.gallery-card{height:250px}}
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container py-2">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
+      <span class="brand-mark"><i class="bi bi-calculator"></i></span><span>Check-Contabil</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+        <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+        <li class="nav-item"><a class="nav-link" href="#empresa">Empresa</a></li>
+        <li class="nav-item"><a class="nav-link" href="#estrutura">Estrutura</a></li>
+        <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+        <li class="nav-item"><a class="btn btn-main ms-lg-2" href="#contato">Fale conosco</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header id="inicio" class="hero">
+  <div class="container hero-content">
+    <div class="eyebrow"><i class="bi bi-shield-check"></i> Contabilidade empresarial em Maceió - AL</div>
+    <h1>Contabilidade que ajuda sua empresa a seguir em frente.</h1>
+    <p class="mt-4 mb-4">A Check-Contabil oferece serviços profissionais de contabilidade para empresas e empreendedores, com foco em organização, conformidade e apoio às decisões do dia a dia.</p>
+    <div class="d-flex flex-wrap gap-3">
+      <a class="btn btn-main" href="https://wa.me/5582991214115?text=Olá%2C%20gostaria%20de%20conhecer%20os%20serviços%20da%20Check-Contabil." target="_blank" rel="noopener"><i class="bi bi-whatsapp me-2"></i>Falar pelo WhatsApp</a>
+      <a class="btn btn-outline-light" href="#servicos">Conheça os serviços</a>
+    </div>
+  </div>
+</header>
+
+<div class="container stat-strip">
+  <div class="row g-3">
+    <div class="col-md-4"><div class="stat-card"><div class="stat-icon"><i class="bi bi-calendar-check"></i></div><h3>Desde 2009</h3><p>Empresa com situação cadastral ativa e atuação registrada desde 25/08/2009.</p></div></div>
+    <div class="col-md-4"><div class="stat-card"><div class="stat-icon"><i class="bi bi-patch-check"></i></div><h3>CRC AL-001102/O</h3><p>Registro profissional informado para a atividade de contabilidade.</p></div></div>
+    <div class="col-md-4"><div class="stat-card"><div class="stat-icon"><i class="bi bi-geo-alt"></i></div><h3>Maceió - AL</h3><p>Atendimento na Avenida Governador Osman Loureiro, Mangabeiras.</p></div></div>
+  </div>
+</div>
+
+<section id="servicos">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="section-kicker">Atividades de contabilidade</div>
+      <h2 class="section-title">Soluções contábeis para a rotina da sua empresa</h2>
+      <p class="section-text mx-auto">Uma estrutura contábil organizada contribui para manter documentos, obrigações e informações empresariais em ordem.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4"><div class="service-card"><div class="service-icon"><i class="bi bi-journal-text"></i></div><h3>Escrituração contábil</h3><p>Organização e registro das informações contábeis de acordo com a realidade e as necessidades da empresa.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="service-card"><div class="service-icon"><i class="bi bi-receipt"></i></div><h3>Rotinas fiscais</h3><p>Apoio na organização das informações e obrigações fiscais relacionadas às atividades empresariais.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="service-card"><div class="service-icon"><i class="bi bi-people"></i></div><h3>Departamento pessoal</h3><p>Suporte às rotinas administrativas relacionadas a colaboradores e aos processos trabalhistas da empresa.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="service-card"><div class="service-icon"><i class="bi bi-graph-up-arrow"></i></div><h3>Informações gerenciais</h3><p>Organização de dados e relatórios que podem auxiliar o empresário no acompanhamento do negócio.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="service-card"><div class="service-icon"><i class="bi bi-building-add"></i></div><h3>Assessoria empresarial</h3><p>Orientação contábil para apoiar empresas em suas rotinas administrativas e necessidades recorrentes.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="service-card"><div class="service-icon"><i class="bi bi-file-earmark-check"></i></div><h3>Organização documental</h3><p>Apoio na conferência e organização de documentos importantes para a rotina contábil da empresa.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="empresa" class="about">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6"><div class="about-img"><img src="https://images.pexels.com/photos/8296970/pexels-photo-8296970.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Profissional analisando documentos contábeis" loading="lazy"></div></div>
+      <div class="col-lg-6">
+        <div class="section-kicker">Sobre a Check-Contabil</div>
+        <h2 class="section-title">Experiência, organização e proximidade com o empresário</h2>
+        <p class="section-text">A <strong>Cincontabil Contabilidade Empresarial LTDA</strong>, nome fantasia <strong>Check-Contabil</strong>, atua no segmento de atividades de contabilidade e está estabelecida em Maceió, Alagoas.</p>
+        <ul class="check-list">
+          <li><i class="bi bi-check-circle-fill"></i><span>Empresa constituída em 25 de agosto de 2009.</span></li>
+          <li><i class="bi bi-check-circle-fill"></i><span>Sociedade Empresária Limitada, porte Empresa de Pequeno Porte.</span></li>
+          <li><i class="bi bi-check-circle-fill"></i><span>Opção pelo Simples Nacional informada desde 25/08/2009.</span></li>
+          <li><i class="bi bi-check-circle-fill"></i><span>Atividade principal: 69.20-6-01 — Atividades de contabilidade.</span></li>
+          <li><i class="bi bi-check-circle-fill"></i><span>Situação cadastral informada como ativa.</span></li>
+        </ul>
+        <a class="btn btn-main" href="#contato">Conheça nossa estrutura</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="text-center mb-5"><div class="section-kicker">Por que organizar a contabilidade?</div><h2 class="section-title">Mais clareza para acompanhar o negócio</h2><p class="section-text mx-auto">A contabilidade faz parte da rotina empresarial e reúne informações importantes para manter registros e obrigações organizados.</p></div>
+    <div class="row g-4">
+      <div class="col-md-4"><div class="feature-box"><i class="bi bi-shield-lock"></i><h3 class="h5 mt-3">Conformidade</h3><p class="text-secondary mb-0">Manter informações e documentos organizados ajuda a empresa a acompanhar suas responsabilidades.</p></div></div>
+      <div class="col-md-4"><div class="feature-box"><i class="bi bi-bar-chart-line"></i><h3 class="h5 mt-3">Visão do negócio</h3><p class="text-secondary mb-0">Dados contábeis bem estruturados podem facilitar o acompanhamento da realidade econômica da empresa.</p></div></div>
+      <div class="col-md-4"><div class="feature-box"><i class="bi bi-clock-history"></i><h3 class="h5 mt-3">Rotina organizada</h3><p class="text-secondary mb-0">Processos e documentos organizados ajudam a tornar a rotina empresarial mais previsível.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="estrutura">
+  <div class="container">
+    <div class="text-center mb-5"><div class="section-kicker">Como trabalhamos</div><h2 class="section-title">Um fluxo simples e organizado</h2><p class="section-text mx-auto">O atendimento contábil pode ser estruturado de acordo com a rotina e as necessidades de cada empresa.</p></div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3"><div class="process-card"><div class="process-number">01</div><h3 class="h5">Entendimento</h3><p class="text-secondary mb-0">Conhecemos a atividade e as necessidades contábeis da empresa.</p></div></div>
+      <div class="col-md-6 col-lg-3"><div class="process-card"><div class="process-number">02</div><h3 class="h5">Organização</h3><p class="text-secondary mb-0">Documentos e informações são reunidos para a rotina contábil.</p></div></div>
+      <div class="col-md-6 col-lg-3"><div class="process-card"><div class="process-number">03</div><h3 class="h5">Acompanhamento</h3><p class="text-secondary mb-0">As informações são acompanhadas conforme os processos e obrigações aplicáveis.</p></div></div>
+      <div class="col-md-6 col-lg-3"><div class="process-card"><div class="process-number">04</div><h3 class="h5">Orientação</h3><p class="text-secondary mb-0">O empresário recebe suporte para entender melhor suas informações contábeis.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="text-center mb-5"><div class="section-kicker">Ambiente profissional</div><h2 class="section-title">Contabilidade para uma rotina empresarial mais organizada</h2></div>
+    <div class="row g-4">
+      <div class="col-md-4"><div class="gallery-card"><img src="https://images.pexels.com/photos/7654132/pexels-photo-7654132.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Equipe trabalhando em escritório" loading="lazy"><div class="gallery-caption">Atendimento e colaboração</div></div></div>
+      <div class="col-md-4"><div class="gallery-card"><img src="https://images.pexels.com/photos/8297030/pexels-photo-8297030.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Documentos e calculadora em atividade contábil" loading="lazy"><div class="gallery-caption">Análise e organização de documentos</div></div></div>
+      <div class="col-md-4"><div class="gallery-card"><img src="https://images.pexels.com/photos/7821546/pexels-photo-7821546.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Profissional analisando documentos" loading="lazy"><div class="gallery-caption">Informação para apoiar decisões</div></div></div>
+    </div>
+    <p class="small-note mt-3">Imagens ilustrativas encontradas na web. Não representam necessariamente as instalações ou a equipe da Check-Contabil.</p>
+  </div>
+</section>
+
+<section class="about">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-6">
+        <div class="section-kicker">Dados cadastrais</div>
+        <h2 class="section-title">Informações da empresa</h2>
+        <div class="data-table mt-4">
+          <div class="row"><div class="col-5 data-label">Razão Social</div><div class="col-7">Cincontabil Contabilidade Empresarial LTDA</div></div>
+          <div class="row"><div class="col-5 data-label">Nome Fantasia</div><div class="col-7">Check-Contabil</div></div>
+          <div class="row"><div class="col-5 data-label">CNPJ</div><div class="col-7">11.085.456/0001-18</div></div>
+          <div class="row"><div class="col-5 data-label">Abertura</div><div class="col-7">25/08/2009</div></div>
+          <div class="row"><div class="col-5 data-label">Porte</div><div class="col-7">Empresa de Pequeno Porte</div></div>
+          <div class="row"><div class="col-5 data-label">Natureza Jurídica</div><div class="col-7">Sociedade Empresária Limitada</div></div>
+          <div class="row"><div class="col-5 data-label">CRC</div><div class="col-7">AL-001102/O</div></div>
+          <div class="row"><div class="col-5 data-label">Simples Nacional</div><div class="col-7">Sim — desde 25/08/2009</div></div>
+          <div class="row"><div class="col-5 data-label">Capital Social</div><div class="col-7">R$ 30.000,00</div></div>
+          <div class="row"><div class="col-5 data-label">Situação</div><div class="col-7">Ativa</div></div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="section-kicker">Atividade principal</div>
+        <h2 class="section-title">Atividades de contabilidade</h2>
+        <p class="section-text">A atividade principal informada para a empresa é o CNAE <strong>69.20-6-01 — Atividades de contabilidade</strong>.</p>
+        <div class="p-4 bg-white rounded-4 border mt-4">
+          <div class="d-flex gap-3 align-items-start"><div class="service-icon flex-shrink-0 mb-0"><i class="bi bi-file-earmark-bar-graph"></i></div><div><h3 class="h5">Atuação contábil</h3><p class="text-secondary mb-0">Serviços voltados à organização e acompanhamento das informações contábeis da empresa, conforme sua atividade e necessidades.</p></div></div>
+        </div>
+        <div class="p-4 bg-white rounded-4 border mt-3">
+          <div class="d-flex gap-3 align-items-start"><div class="service-icon flex-shrink-0 mb-0"><i class="bi bi-people-fill"></i></div><div><h3 class="h5">Quadro societário</h3><p class="text-secondary mb-0">Aldrin de Castro Silva Agra, Aureliano Sergio Azevedo Ferreira, Carlos Allan Maranhao de Vasconcelos e Leonardo Aureliano Ramalho Azevedo — Sócios-Administradores, conforme os dados fornecidos.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="faq">
+  <div class="container">
+    <div class="text-center mb-5"><div class="section-kicker">Perguntas frequentes</div><h2 class="section-title">Dúvidas sobre serviços contábeis</h2></div>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#f1">Para que serve um escritório de contabilidade?</button></h3><div id="f1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion"><div class="accordion-body text-secondary">O escritório contábil apoia a empresa na organização das informações contábeis e em suas rotinas e obrigações, de acordo com as necessidades do negócio.</div></div></div>
+      <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f2">A Check-Contabil atende empresas?</button></h3><div id="f2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body text-secondary">Sim. A empresa atua com atividades de contabilidade e pode atender empresas e empreendedores conforme a demanda e os serviços contratados.</div></div></div>
+      <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f3">Onde fica a Check-Contabil?</button></h3><div id="f3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body text-secondary">A empresa está localizada na Avenida Governador Osman Loureiro, 49, Edif Business Tower, Sala 304, Mangabeiras, Maceió - AL, CEP 57037-630.</div></div></div>
+      <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f4">Como entrar em contato?</button></h3><div id="f4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body text-secondary">Você pode ligar para (82) 3338-1167, enviar mensagem pelo WhatsApp (82) 99121-4115 ou utilizar o e-mail ctelma@novadvocaci.site.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contato" class="contact">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-5">
+        <div class="section-kicker">Fale com a Check-Contabil</div>
+        <h2 class="section-title">Vamos conversar sobre a rotina contábil da sua empresa.</h2>
+        <p class="section-text">Entre em contato pelos canais oficiais informados e conheça as possibilidades de atendimento.</p>
+        <div class="d-grid gap-3 mt-4">
+          <div class="contact-card"><i class="bi bi-whatsapp"></i><strong>WhatsApp</strong><div class="mt-1"><a href="https://wa.me/5582991214115" target="_blank" rel="noopener">(82) 99121-4115</a></div></div>
+          <div class="contact-card"><i class="bi bi-telephone"></i><strong>Telefone</strong><div class="mt-1"><a href="tel:+558233381167">(82) 3338-1167</a></div></div>
+          <div class="contact-card"><i class="bi bi-envelope"></i><strong>E-mail</strong><div class="mt-1"><a href="mailto:ctelma@novadvocaci.site">ctelma@novadvocaci.site</a></div></div>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="map-wrap">
+          <iframe loading="lazy" allowfullscreen src="https://www.google.com/maps?q=Avenida+Governador+Osman+Loureiro,+49,+Mangabeiras,+Maceió+-+AL,+57037-630&output=embed"></iframe>
+        </div>
+        <div class="mt-3"><i class="bi bi-geo-alt me-2"></i>Avenida Governador Osman Loureiro, 49 — Edif Business Tower, Sala 304 — Mangabeiras, Maceió/AL — CEP 57037-630</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-7"><strong class="text-white">Check-Contabil</strong><br><span>Cincontabil Contabilidade Empresarial LTDA · CNPJ 11.085.456/0001-18</span></div>
+      <div class="col-lg-5 text-lg-end"><a href="#inicio" class="me-3">Início</a><a href="#servicos" class="me-3">Serviços</a><a href="#contato">Contato</a></div>
+    </div>
+    <hr class="border-secondary my-4">
+    <div class="small">© <span id="year"></span> Check-Contabil. Todos os direitos reservados.</div>
+  </div>
+</footer>
+
+<a class="floating-wa" href="https://wa.me/5582991214115?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20Check-Contabil." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><i class="bi bi-whatsapp"></i></a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
